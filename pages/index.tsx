@@ -16,7 +16,7 @@ export default function Home() {
     {
       description: 'Roger Nilsen dro på blind date med fire ukjente kvinner.',
       image: '/daffadigg.jpg',
-      title: 'Speed date med Roger Nilsen'
+      title: 'Speed date med Roger Nilsen',
     });
   projectPreviews.push(
     {
@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div>
       {projectPreviews.map(element => (
-          <ProjectPreview  {...element} />)
+          <ProjectPreview  key={element.title} {...element} />)
       )}
 
 
