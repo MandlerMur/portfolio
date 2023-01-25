@@ -12,12 +12,13 @@ const ProjectPreview: React.FC<PreviewProps> = (props: PreviewProps) => {
 
 
     return (
-        <div className="flex flex-wrap">
+        <div className="bg-orange-100/90 rounded text-slate-800">
 
-            <div className="w-full md:w-1/2 p-2">
-                <Image alt="daffadigg" src={props.image} width="200" height="200"></Image>
-                <Link href="/project" className="text-l font-bold underline hover:text-indigo-500">{props.title}</Link>
-                <div>
+            <div className="w-full p-4 m-4">
+                <Image alt="daffadigg" className="p-2" src={props.image} width="400" height="400"></Image>
+                
+                <Link href="/project" className="text-l font-bold underline p-2 hover:text-indigo-500">{props.title}</Link>
+                <div className="p-2">
                     {props.description}
                 </div>
             </div>

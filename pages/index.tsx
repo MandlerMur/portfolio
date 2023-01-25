@@ -26,13 +26,13 @@ export default function Home() {
     });
     projectPreviews.push(
       {
-        description: 'Rett fra blokken',
+        description: 'Finansbransjen i Bergen er et beinhardt miljø',
         image: '/RettFraBlokken.jpg',
         title: 'Sband7 - Rett fra Blokken'
       });
 
   return (
-    <div>
+    <div className="flex flex-wrap place-content-center gap-2">
       {projectPreviews.map(element => (
           <ProjectPreview  key={element.title} {...element} />)
       )}

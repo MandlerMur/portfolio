@@ -6,7 +6,7 @@ import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Layout>
-    <div className="bg-fixed text-slate-700 font-serif bg-[url('/bg.jpg')] h-[972px]" >
+    <div >
       <Header />
       <div>  <Component {...pageProps} /></div>
       <Footer />

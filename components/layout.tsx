@@ -1,7 +1,7 @@
 const Layout = (props: any) => {
     return (
-        <div className="bg-cover text-slate-700 font-serif bg-[url('/bg.jpg')]">
-            <div className="">
+        <div className="bg-cover bg-no-repeat bg-center bg-[url('/bg.jpg')]">
+            <div className="font-sans">
                 {props.children}
             </div>
         </div>)
