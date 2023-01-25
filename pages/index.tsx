@@ -24,6 +24,12 @@ export default function Home() {
       image: '/parking.png',
       title: 'Sband7 - What about parking?'
     });
+    projectPreviews.push(
+      {
+        description: 'Rett fra blokken',
+        image: '/RettFraBlokken.jpg',
+        title: 'Sband7 - Rett fra Blokken'
+      });
 
   return (
     <div>

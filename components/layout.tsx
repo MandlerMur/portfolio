@@ -1,7 +1,7 @@
 const Layout = (props: any) => {
     return (
-        <div className="h-screen flex">
-            <div className="max-w-sm m-auto">
+        <div className="bg-cover text-slate-700 font-serif bg-[url('/bg.jpg')]">
+            <div className="">
                 {props.children}
             </div>
         </div>)
