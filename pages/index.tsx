@@ -5,7 +5,7 @@ import { GetStaticProps, NextPage } from 'next'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const Home: NextPage<HomeProps []> = (props) => {
+const Home: NextPage<Wrapper> = (props) => {
 
 
   return (
@@ -27,13 +27,17 @@ const client = createClient(
   }
 );
 
+interface Wrapper {
+  projects: HomeProps[]
+}
+
 interface HomeProps {
   title: string;
   description: string;
   image: string;
 }
 
-export const getStaticProps: GetStaticProps<any> = async () => {
+export const getStaticProps: GetStaticProps<Wrapper> = async () => {
   const projects = await client.fetch(`*[_type == "Project"]`);
 
   return {
