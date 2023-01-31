@@ -1,17 +1,34 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import Footer from '@/components/footer'
-import styles from '@/styles/Home.module.css'
-import Header from '@/components/header'
-import ProjectPreview from '@/components/project_preview'
-import Layout from '@/components/layout'
 import ProjectDetails from '@/components/project_details'
+import { GetServerSideProps, GetStaticProps, NextPage } from 'next'
+import { useRouter } from 'next/router'
+import { createClient } from 'next-sanity'
+import { ProjectDetailProps } from '@/components/ProjectDetailProps'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+
+const Home: NextPage<ProjectDetailProps> = (props) => {
   return (
-        <div><ProjectDetails /></div>
+        <div><ProjectDetails {...props} /></div>
   )
 }
+
+const client = createClient(
+  {
+    projectId: "auuybyy6",
+    dataset: "production",
+    apiVersion: "2023-01-30",
+    useCdn: false
+  }
+);
+
+
+Home.getInitialProps = async (context) => {
+  const { query } = context;
+  const { id } = query;
+  const project: ProjectDetailProps = await client.fetch(`*[_id == "${id}"][0]`);
+  return project;
+};
+
+export default Home;

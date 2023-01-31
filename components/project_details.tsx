@@ -1,27 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ProjectDetailProps } from "./ProjectDetailProps";
 
 const picture = "/daffadigg.jpg";
-const ProjectDetails = () => {
 
-
-    const title: string = "Speed date med Roger Nilsen"
-    const description: string = "Roger Nilsen dro på blind date med fire ukjente kvinner."
+const ProjectDetails : React.FC<ProjectDetailProps> = (props: ProjectDetailProps) => {
 
     return (
-        <div >
-            <h1 className="text-2xl font-bold ">{title}</h1>
+        <div className="bg-white">
+            <h1 className="text-2xl font-bold ">{props.title}</h1>
 
             <div>
-                {description}
+                {props.description}
             </div>
-            <Image alt="daffadigg" src={picture} width="500" height="500" />
+            <Image alt="daffadigg" src={props.image} width="500" height="500" />
 
 
 
             <div className="mt-5">
             <h1 className="text-2xl font-bold ">Sjekk den ut!</h1>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/rgjtIFRqUM0"
+                <iframe width="560" height="315" src={props.embedUrl}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen></iframe>

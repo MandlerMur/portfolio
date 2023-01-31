@@ -35,6 +35,7 @@ interface HomeProps {
   title: string;
   description: string;
   image: string;
+  _id: string;
 }
 
 export const getStaticProps: GetStaticProps<Wrapper> = async () => {
