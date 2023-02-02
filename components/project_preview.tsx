@@ -18,7 +18,7 @@ const ProjectPreview: React.FC<PreviewProps> = (props: PreviewProps) => {
             <div className="w-full p-4 m-4">
                 <Image alt="daffadigg" className="p-2" src={props.image} width="400" height="400"></Image>
                 
-                <Link href={`/project?id=${props._id}`}  className="text-l font-bold underline p-2 hover:text-indigo-500">{props.title}</Link>
+                <Link href={`/post/${props._id}`}  className="text-l font-bold underline p-2 hover:text-indigo-500">{props.title}</Link>
                 <div className="p-2">
                     {props.description}
                 </div>
