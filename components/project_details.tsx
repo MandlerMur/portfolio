@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ProjectDetailProps } from "./ProjectDetailProps";
+import { ProjectDetailProps } from "../sanitytypes/ProjectDetailProps";
 
 const ProjectDetails : React.FC<ProjectDetailProps> = (props: ProjectDetailProps) => {
     return (

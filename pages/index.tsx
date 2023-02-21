@@ -9,7 +9,7 @@ const Home: NextPage<Wrapper> = (props) => {
 
 
   return (
-    <div className="flex flex-wrap place-content-center gap-2">
+    <div className="flex items-center place-content-center gap-2 flex-wrap">
       {props.projects.map(element => (
         <ProjectPreview key={element.title} {...element} />)
       )}
