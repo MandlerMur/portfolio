@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'lighthouse': "url('/public/bg.jpg')"
+        'lighthouse': "url('/bg.jpg')"
       }
     },
   },

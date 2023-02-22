@@ -1,5 +1,6 @@
 export interface ArticleProps {
     title: string;
+    slug: string;
     body: PortableText;
 }
 
