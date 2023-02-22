@@ -3,6 +3,7 @@ import ProjectDetails from '@/components/project_details'
 import { InferGetStaticPropsType, NextPage } from 'next'
 import { createClient } from 'next-sanity'
 import { useRouter } from 'next/router'
+import client from '@/sanitytypes/Connection'
 
 const Post: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
     return (
@@ -10,14 +11,6 @@ const Post: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) =
     )
   }
 
-const client = createClient(
-    {
-        projectId: "auuybyy6",
-        dataset: "production",
-        apiVersion: "2023-01-30",
-        useCdn: false
-    }
-);
 
 export async function getStaticProps(context: any) {
     const { pid = "" } = context.params

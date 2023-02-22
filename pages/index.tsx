@@ -1,7 +1,7 @@
 import { Inter } from '@next/font/google'
 import ProjectPreview, { PreviewProps } from '@/components/project_preview'
-import { createClient } from 'next-sanity';
 import { GetStaticProps, NextPage } from 'next'
+import client from '@/sanitytypes/Connection'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,15 +17,6 @@ const Home: NextPage<Wrapper> = (props) => {
     </div>
   )
 }
-
-const client = createClient(
-  {
-    projectId: "auuybyy6",
-    dataset: "production",
-    apiVersion: "2023-01-30",
-    useCdn: false
-  }
-);
 
 interface Wrapper {
   projects: HomeProps[]
