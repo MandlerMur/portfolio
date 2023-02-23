@@ -12,7 +12,7 @@ const Article : React.FC<ArticleProps> = (props: ArticleProps) => {
     }
 
     return (
-        <div className="bg-white m-4">
+        <div className="bg-white m-4 p-4">
             <div className="mb-8">
                 <PortableText value={props.body} components={ptComponents} />
             </div>
