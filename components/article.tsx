@@ -5,6 +5,8 @@ import {PortableText, PortableTextComponents} from '@portabletext/react'
 const Article : React.FC<ArticleProps> = (props: ArticleProps) => {
 
     const ptComponents: PortableTextComponents = {
+        list:  ({children}) => <ul className="list-disc list-inside">{children}</ul>,
+        listItem: ({children}) => <li>{children}</li>,
         block: {
             h2: ({children}) => <h2 className="text-4xl mt-4">{children}</h2>,
             h4: ({children}) => <h4 className="text-2xl font-bold mt-4">{children}</h4>
