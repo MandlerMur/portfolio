@@ -12,8 +12,6 @@ const ProjectDetails : React.FC<ProjectDetailProps> = (props: ProjectDetailProps
             </div>
             <Image alt="daffadigg" src={props.image} width="500" height="500" />
 
-
-
             <div className="mt-5">
             <h1 className="text-2xl font-bold">Sjekk den ut!</h1>
                 <iframe width="560" height="315" src={props.embedLink}
